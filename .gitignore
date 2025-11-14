@@ -1,0 +1,61 @@
+# Arquivos de usuário do Visual Studio
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.log
+*.vspscc
+*.vssscc
+*.cache
+*.pdb
+
+# Diretórios do Visual Studio
+.vs/
+TestResults/
+.nuget/
+packages/
+
+# Arquivos de configuração de publicação
+*.pubxml
+*.publishsettings
+
+# Arquivos de backup
+*.bak
+*.backup
+*.old
+
+# Arquivos do Resharper / Rider
+_ReSharper*/
+*.DotSettings.user
+.idea/
+
+# Arquivos de sistema
+Thumbs.db
+Desktop.ini
+
+# Angular / Node
+node_modules/
+dist/
+.tmp/
+.angular/cache/
+package-lock.json
+
+# IDE/OS
+.vscode/
+.DS_Store
+Thumbs.db

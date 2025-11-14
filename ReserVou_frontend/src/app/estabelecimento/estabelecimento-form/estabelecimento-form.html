@@ -1,0 +1,23 @@
+<h2>Novo Estabelecimento</h2>
+
+<form (ngSubmit)="adicionar()">
+    <label>
+        Nome:
+        <input [(ngModel)]="Nome" name="Nome" required />
+    </label>
+    <label>
+        Endereco:
+        <input [(ngModel)]="Endereco" name="Endereco" required />
+    </label>
+
+    <button  type="submit">
+        Salvar
+    </button>
+</form>
+
+<style>
+  .full-width {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+</style>

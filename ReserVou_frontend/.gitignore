@@ -1,0 +1,105 @@
+# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+# Node
+/node_modules
+npm-debug.log
+yarn-error.log
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Miscellaneous
+/.angular/cache
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+__screenshots__/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Arquivos de usuário do Visual Studio
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.log
+*.vspscc
+*.vssscc
+*.cache
+*.pdb
+
+# Diretórios do Visual Studio
+.vs/
+TestResults/
+.nuget/
+packages/
+
+# Arquivos de configuração de publicação
+*.pubxml
+*.publishsettings
+
+# Arquivos de backup
+*.bak
+*.backup
+*.old
+
+# Arquivos do Resharper / Rider
+_ReSharper*/
+*.DotSettings.user
+.idea/
+
+# Arquivos de sistema
+Thumbs.db
+Desktop.ini
+
+# Angular / Node
+node_modules/
+dist/
+.tmp/
+.angular/cache/
+package-lock.json
+
+# IDE/OS
+.vscode/
+.DS_Store
+Thumbs.db

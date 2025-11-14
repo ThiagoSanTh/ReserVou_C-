@@ -1,0 +1,6 @@
+@ReserVou.WebApi_HostAddress = http://localhost:5035
+
+GET {{ReserVou.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
