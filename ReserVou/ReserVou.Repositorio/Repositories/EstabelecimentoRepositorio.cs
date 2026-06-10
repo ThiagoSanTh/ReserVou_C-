@@ -1,6 +1,8 @@
-﻿using ReserVou.Dominio;
+﻿using ReserVou.Dominio.Entities;
+using ReserVou.Repositorio.DBContexts;
+using ReserVou.Repositorio.Interfaces;
 
-namespace ReserVou.Repositorio
+namespace ReserVou.Repositorio.Repositories
 {
     public class EstabelecimentoRepositorio : IEstabelecimentoRepositorio
     {

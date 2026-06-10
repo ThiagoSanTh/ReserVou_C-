@@ -1,5 +1,5 @@
 import { Injectable, inject } from '@angular/core';
-import { Estabelecimento } from './estabelecimento.model';
+import { Estabelecimento } from '../models/estabelecimento.model';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -15,7 +15,7 @@ export class EstabelecimentoService {
         return this.http.get<Estabelecimento[]>(this.API);
     }
 
-    adicionar(estabelecimento: Estabelecimento): Observable<Estabelecimento> {
+    adicionarEstabelecimento(estabelecimento: Estabelecimento): Observable<Estabelecimento> {
         return this.http.post<Estabelecimento>(this.API, estabelecimento); // ALTERADO AQUI
 }
 

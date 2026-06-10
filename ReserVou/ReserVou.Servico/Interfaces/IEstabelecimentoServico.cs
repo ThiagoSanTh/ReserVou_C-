@@ -1,10 +1,11 @@
-﻿using ReserVou.Dominio;
+﻿using ReserVou.Dominio.Entities;
+using ReserVou.Dominio.Enums;
 
-namespace ReserVou.Servico
+namespace ReserVou.Servico.Interfaces
 {
     public interface IEstabelecimentoServico
     {
-        void Adicionar(string nome, string endereco);
+        void Adicionar(string nome, string endereco, TipoEstabelecimento tipo);
         List<Estabelecimento> ObterTodos();
         /*
         Estabelecimento ObterPorId(int id);

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { EstabelecimentoService } from '../estabelecimento.service';
-import { Estabelecimento } from '../estabelecimento.model';
+import { EstabelecimentoService } from '../../shared/services/estabelecimento.service';
+import { Estabelecimento } from '../../shared/models/estabelecimento.model';
 import { CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
@@ -16,7 +16,7 @@ import { RouterModule, Router } from '@angular/router';
 
 export class EstabelecimentoListComponent implements OnInit {
     estabelecimentos: Estabelecimento[] = [];
-    displayedColumns = ['id', 'nome', 'endereco', 'acoes'];
+    displayedColumns = ['id', 'nome', 'endereco', 'tipo', 'acoes'];
 
     constructor(
       private estabelecimentoService: EstabelecimentoService, 
@@ -29,13 +29,17 @@ export class EstabelecimentoListComponent implements OnInit {
       });
   }
 
-      irParaLista() {
-    this.router.navigate(['/']);
- }
+  irParaHome() {
+    this.router.navigate(['/home']);
+}
 
-  irParaAdicionar() {
-    this.router.navigate(['/novo']);
- }
+  irParaListaDeEstabelecimentos() {
+    this.router.navigate(['/listarEstabelecimentos']);
+}
+
+  irParaAdicionarEstabelecimento() {
+    this.router.navigate(['/novoEstabelecimento']);
+} 
 
   editar(estabelecimento: Estabelecimento) {
   alert(`Editar estabelecimento ${estabelecimento.Nome} (simulação)`);

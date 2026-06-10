@@ -14,11 +14,19 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
 export class App {
   constructor(private router: Router) { }
-  irParaLista() {
-    this.router.navigate(['/']);
- }
-
-  irParaAdicionar() {
-    this.router.navigate(['/novo']);
- }
+    irParaHome() {
+      this.router.navigate(['/home']);
+  }
+    irParaListaDeUsuarios() {
+      this.router.navigate(['/listarUsuarios']);
+  }
+    irParaListaDeEstabelecimentos() {
+      this.router.navigate(['/listarEstabelecimentos']);
+  }
+    irParaAdicionarUsuario() {
+      this.router.navigate(['/novoUsuario']);
+  }
+    irParaAdicionarEstabelecimento() {
+      this.router.navigate(['/novoEstabelecimento']);
+  }
 }

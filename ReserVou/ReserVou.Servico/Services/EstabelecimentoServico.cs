@@ -1,7 +1,9 @@
-﻿using ReserVou.Dominio;
-using ReserVou.Repositorio;
+﻿using ReserVou.Dominio.Entities;
+using ReserVou.Dominio.Enums;
+using ReserVou.Repositorio.Interfaces;
+using ReserVou.Servico.Interfaces;
 
-namespace ReserVou.Servico
+namespace ReserVou.Servico.Services
 {
     public class EstabelecimentoServico : IEstabelecimentoServico
     {
@@ -12,9 +14,9 @@ namespace ReserVou.Servico
             _estabelecimentos = estabelecimento;
         }
 
-        public void Adicionar(string nome, string endereco)
+        public void Adicionar(string nome, string endereco, TipoEstabelecimento tipo)
         {
-            var estabelecimento = new Estabelecimento(nome, endereco);
+            var estabelecimento = new Estabelecimento(nome, endereco, tipo);
             _estabelecimentos.Adicionar(estabelecimento);
         }
 

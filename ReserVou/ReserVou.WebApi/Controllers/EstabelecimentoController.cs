@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using ReserVou.Dominio;
-using ReserVou.Servico;
+using ReserVou.Dominio.Entities;
+using ReserVou.Servico.Interfaces;
 
 namespace ReserVou.WebApi.Controllers
 {
@@ -19,7 +19,7 @@ namespace ReserVou.WebApi.Controllers
         [HttpPost]
         public IActionResult Post(Estabelecimento estabelecimento)
         {
-            _estabelecimentoServico.Adicionar(estabelecimento.Nome, estabelecimento.Endereco);
+            _estabelecimentoServico.Adicionar(estabelecimento.Nome, estabelecimento.Endereco, estabelecimento.Tipo);
             return Ok(new {mensagem = "Estabelecimento cadastrado!" } );
         }
 

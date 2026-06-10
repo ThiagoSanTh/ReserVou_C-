@@ -1,20 +1,16 @@
-<h2>Novo Estabelecimento</h2>
+<h2>Novo Usuário</h2>
 
-<form (ngSubmit)="adicionarEstabelecimento()">
+<form (ngSubmit)="adicionarUsuario()">
     <label>
         Nome:
         <input [(ngModel)]="Nome" name="Nome" required />
     </label>
     <label>
-        Endereco:
-        <input [(ngModel)]="Endereco" name="Endereco" required />
-    </label>
-    <label>
-      Tipo de Estabelecimento:
+      Tipo de Usuário:
       <select [(ngModel)]="Tipo" name="Tipo" required>
           <option [ngValue]="null" disabled>Selecione o Tipo</option> 
           
-          <option *ngFor="let item of tiposEstabelecimento" [ngValue]="item.valor">
+          <option *ngFor="let item of tiposUsuario" [ngValue]="item.valor">
               {{ item.nome }} 
           </option>
       </select>

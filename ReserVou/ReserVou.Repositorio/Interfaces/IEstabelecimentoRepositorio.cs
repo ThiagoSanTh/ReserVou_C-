@@ -1,6 +1,6 @@
-﻿using ReserVou.Dominio;
+﻿using ReserVou.Dominio.Entities;
 
-namespace ReserVou.Repositorio
+namespace ReserVou.Repositorio.Interfaces
 {
     public interface IEstabelecimentoRepositorio
     {

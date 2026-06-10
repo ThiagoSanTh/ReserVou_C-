@@ -1,6 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ReserVou.Repositorio;
-using ReserVou.Servico;
+using ReserVou.Repositorio.Interfaces;
+using ReserVou.Repositorio.Repositories;
+using ReserVou.Servico.Interfaces;
+using ReserVou.Servico.Services;
+using ReserVou.Repositorio.DBContexts;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,9 +20,14 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<EstabelecimentoDBContext>(opt =>
     opt.UseInMemoryDatabase("EstabelecimentosDb"));
 
+builder.Services.AddDbContext<UsuarioDBContext>(opt =>
+    opt.UseInMemoryDatabase("UsuariosDb"));
+
 // Injeções de dependência
 builder.Services.AddScoped<IEstabelecimentoRepositorio, EstabelecimentoRepositorio>();
 builder.Services.AddScoped<IEstabelecimentoServico, EstabelecimentoServico>();
+builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
+builder.Services.AddScoped<IUsuarioServico, UsuarioServico>();
 
 // CORS
 builder.Services.AddCors(options =>
